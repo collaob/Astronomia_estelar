@@ -1,6 +1,6 @@
-PWD c:\Users\benja\Documents\Lic Física\S7\Astronomia Estelar
+PWD c:\Users\benja\Documents\Lic Física\S7\Astronomia Estelar\Astronomia_estelar
 INPUT C:\Users\benja\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\benja\Documents\Lic Física\S7\Astronomia Estelar\clases.tex
+INPUT c:\Users\benja\Documents\Lic Física\S7\Astronomia Estelar\Astronomia_estelar\clases.tex
 OUTPUT clases.log
 INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
@@ -85,6 +85,16 @@ INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\color.
 INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\tex\latex\graphics\mathcolor.ltx
 INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\tex\latex\graphics\mathcolor.ltx
 INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\tex\latex\graphics\mathcolor.ltx
+INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\tex\latex\csquotes\csquotes.sty
+INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\tex\latex\csquotes\csquotes.sty
+INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\tex\latex\csquotes\csquotes.def
+INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\tex\latex\csquotes\csquotes.def
+INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\tex\latex\csquotes\csquotes.def
+INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\tex\latex\csquotes\csquotes.cfg
+INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\tex\latex\csquotes\csquotes.cfg
+INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\tex\latex\csquotes\csquotes.cfg
 INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT .\clases.aux
@@ -99,12 +109,13 @@ INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstop
 INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
-INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm1440.tfm
-INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1440.tfm
-INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1095.tfm
+INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm1728.tfm
+INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1728.tfm
+INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm1200.tfm
+INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
 INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
-INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
+INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
 INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi8.tfm
 INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi6.tfm
 INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
@@ -125,15 +136,23 @@ INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsb.fd
 INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
-INPUT .\imagenes\fig 1.png
-INPUT .\imagenes\fig 1.png
-INPUT .\imagenes\fig 1.png
-INPUT .\imagenes\fig 1.png
+INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm1440.tfm
+INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1440.tfm
+INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1095.tfm
+INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
+INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 OUTPUT clases.pdf
-INPUT .\imagenes\fig 1.png
-INPUT .\imagenes\fig 1.png
-INPUT .\imagenes\fig 1.png
 INPUT C:\Users\benja\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT .\imagenes\fig 1.png
+INPUT .\imagenes\fig 1.png
+INPUT .\imagenes\fig 1.png
+INPUT .\imagenes\fig 1.png
+INPUT .\imagenes\fig 1.png
+INPUT .\imagenes\fig 1.png
+INPUT .\imagenes\fig 1.png
 INPUT .\imagenes\fig 2.png
 INPUT .\imagenes\fig 2.png
 INPUT .\imagenes\fig 2.png
@@ -169,28 +188,28 @@ INPUT .\imagenes\fig 6.png
 INPUT .\imagenes\fig 6.png
 INPUT .\imagenes\fig 6.png
 INPUT .\imagenes\fig 6.png
+INPUT .\imagenes\fig 7.png
+INPUT .\imagenes\fig 7.png
+INPUT .\imagenes\fig 7.png
+INPUT .\imagenes\fig 7.png
+INPUT .\imagenes\fig 7.png
+INPUT .\imagenes\fig 7.png
+INPUT .\imagenes\fig 7.png
+INPUT .\imagenes\fig 8.png
+INPUT .\imagenes\fig 8.png
+INPUT .\imagenes\fig 8.png
+INPUT .\imagenes\fig 8.png
+INPUT .\imagenes\fig 8.png
+INPUT .\imagenes\fig 8.png
+INPUT .\imagenes\fig 8.png
+INPUT .\imagenes\fig 9.png
+INPUT .\imagenes\fig 9.png
+INPUT .\imagenes\fig 9.png
+INPUT .\imagenes\fig 9.png
+INPUT .\imagenes\fig 9.png
+INPUT .\imagenes\fig 9.png
+INPUT .\imagenes\fig 9.png
 INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1095.tfm
-INPUT .\imagenes\fig 7.png
-INPUT .\imagenes\fig 7.png
-INPUT .\imagenes\fig 7.png
-INPUT .\imagenes\fig 7.png
-INPUT .\imagenes\fig 7.png
-INPUT .\imagenes\fig 7.png
-INPUT .\imagenes\fig 7.png
-INPUT .\imagenes\fig 8.png
-INPUT .\imagenes\fig 8.png
-INPUT .\imagenes\fig 8.png
-INPUT .\imagenes\fig 8.png
-INPUT .\imagenes\fig 8.png
-INPUT .\imagenes\fig 8.png
-INPUT .\imagenes\fig 8.png
-INPUT .\imagenes\fig 9.png
-INPUT .\imagenes\fig 9.png
-INPUT .\imagenes\fig 9.png
-INPUT .\imagenes\fig 9.png
-INPUT .\imagenes\fig 9.png
-INPUT .\imagenes\fig 9.png
-INPUT .\imagenes\fig 9.png
 INPUT .\imagenes\fig 10.png
 INPUT .\imagenes\fig 10.png
 INPUT .\imagenes\fig 10.png
@@ -198,6 +217,8 @@ INPUT .\imagenes\fig 10.png
 INPUT .\imagenes\fig 10.png
 INPUT .\imagenes\fig 10.png
 INPUT .\imagenes\fig 10.png
+INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0800.tfm
+INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0600.tfm
 INPUT .\imagenes\fig 11.png
 INPUT .\imagenes\fig 11.png
 INPUT .\imagenes\fig 11.png
@@ -229,21 +250,29 @@ INPUT .\imagenes\fig 13.png
 INPUT .\imagenes\fig 13.png
 INPUT .\imagenes\fig 13.png
 INPUT .\imagenes\fig 13.png
-INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm1200.tfm
+INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx0800.tfm
+INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx0600.tfm
+INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti1095.tfm
 INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1200.tfm
 INPUT clases.aux
 INPUT C:\Users\benja\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk
 INPUT C:\Users\benja\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk
+INPUT C:\Users\benja\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1095.pk
+INPUT C:\Users\benja\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1095.pk
 INPUT C:\Users\benja\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0900.pk
 INPUT C:\Users\benja\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0900.pk
 INPUT C:\Users\benja\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1095.pk
 INPUT C:\Users\benja\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1095.pk
 INPUT C:\Users\benja\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk
 INPUT C:\Users\benja\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk
-INPUT C:\Users\benja\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk
-INPUT C:\Users\benja\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk
 INPUT C:\Users\benja\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk
 INPUT C:\Users\benja\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk
+INPUT C:\Users\benja\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk
+INPUT C:\Users\benja\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk
+INPUT C:\Users\benja\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk
+INPUT C:\Users\benja\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk
+INPUT C:\Users\benja\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk
+INPUT C:\Users\benja\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk
 INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cmextra\cmbsy8.pfb
 INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cmextra\cmbsy8.pfb
 INPUT C:\Users\benja\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
