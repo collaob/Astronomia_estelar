@@ -464,73 +464,504 @@ Esto fue un problema para los físicos del siglo XIX:
     - William Thomson (Lord Kelvin), 1862
 \end{quote}
 
+Sin embargo, la evolución biológica y los procesos geológicos necesitan más tiempo y, a partir del siglo XX, el desarrollo de la datación radiométrica (Baltwood, 1907) permitió demostrar que la Tierra tiene or lo menos 500 millones de años.
+Esta paradoja solo se resolvió en 1920 cuando A. Eddington sugirió la fusión nuclear como fuente de energía estelar.
 
-\section{Ecuaciones de estructura}
+La diferencia mayor de energía de enlace por nucleón (Fig. 2) se encuentra entre H y Fe y corresponde a un $0.8\%$ de masa: $E_n ~ 0.008M_Sc^2/L_S$.
+En el caso del Sol, implicaría $t_{n, \odot} ~ 10^11$ años.
 
-perfil de masa
+Sin embargo, solo $10\%$ de la masa del sol (es decir, su núcleo) puede fusionar, además su luminosidad aumentará en las ultimas fases de su evolución ($t_{n, \odot} < 10^{10}$ años).
 
-\begin{equation}
-    \frac{dM}{dr} = 4\pi r^2 \rho
-\end{equation}
-
-equilibrio hidrostático
-
-\begin{equation}
-    \frac{dP}{dr} = -\frac{GM\rho}{r^2}
-\end{equation}
-
-perfil de luminosidad
+Una expresión más correcta de la escala de tiempo nuclear es entonces:
 
 \begin{equation}
-    \frac{dL}{dr} = 4\pi r^2 \rho \epsilon
+    t_N \sim \eta \frac{M_c c^2}{L_s}
 \end{equation}
 
-radiativo
+Donde $M_c$ es la masa del nucleo y $\eta \le 0.008$ la eficiencia de conversión de los procesos de fusión en el núcleo estelar.
+
+\subsubsection{Absorción}
+
+Describe el proceso en que la radiación atraviesa un medio con $n$ particulas absorbentes por unidad de volumen con sección eficaz $\sigma _V cm^{-2}$, la fracción de partículas absorbidas es proporcional al área fraccionada obstruida:
+
+\begin{align}
+    \frac{dI_V}{I_V} = \frac{-ndAds \sigma_V}{dA} = -n \sigma _V ds \\
+    \intertext{por lo tanto}
+    \frac{dI_V}{I_V} = -n \sigma _V ds \equiv - \alpha _V ds
+\end{align}
+
+Donde $\alpha_V$ es el \textbf{coeficiente de absorción} (c/m) y se puedes escribir en terminos de la densidad. $\alpha _V \equiv \rho \kappa _V$, donde $\kappa$ es la \textbf{opacidad} ($cm^2g^{-1}$)
+
+La ecuación de transferencia radiativa en caso de absroción es entonces
+\begin{align}
+    \frac{dI_V}{ds} = - \alpha I_V \\
+    \intertext{Integramos}
+    I_V (s + ds) = I_V (s)e^{-\int ^{s+ds} _S \alpha _V (s')ds'} \\
+    \intertext{Cuando $\int ^{s+ds} _S \alpha _V (s')ds' = 1$ la intensidad I disminuye de 1/e. Entonces, podemos definir la \textbf{profundidad óptica como}}
+    \tau_\nu(\Delta s) = \int_{s}^{s+\Delta s} \alpha_\nu(s') ds' = \int_{s}^{s+\Delta s} \kappa(s') \rho(s') ds'
+\end{align}
+
+Un medio es opticamente grueso si $\tau _V > 1$ y ópticamente delgado si $\tau _V < 1$.
+
+Visto que loa estrella está en equilibrio, su luminosidad superficial es $L_S$ debe ser compensadapor una producción de energía en el interior:
 
 \begin{equation}
-    \frac{dT}{dr} = -\frac{3\kappa \rho L}{16\pi a c T^3 r^2}
+    L_s = \int_{0}^{R_s} \epsilon(r) \rho(r) 4 \pi r^2 dr \, , \text{ entonces } \frac{dL}{dr} = 4 \pi r^2 \rho(r) \epsilon(r)
 \end{equation}
 
-convectivo
+Es el perfil radial de la luminosidad $\epsilon (r)$ es aquío un termino de producción de eneergía todavía no especificado. 
+
+Sin embargo, durante fases evolutivas rápidas (es decir, contracción o expansión, cuando $t << t_{th}$):
 
 \begin{equation}
-    \frac{-\mu m g}{R_b}\left(1 - \frac{1}{\gamma (\rho , T)}\right)
+    \frac{dL}{dr} = 4 \pi r^2 \rho(r) \left( \epsilon(r) - T \frac{dS}{dt} \right)
 \end{equation}
 
-\begin{equation}
-    P = \frac{\rho k T}{\mu m}
-\end{equation}
+Donde T es la temperatura y S la entropía por unidad de masa.
 
-gráfico inestable
+\subsubsection{Energía interna y escalas de tiempo}
 
-\begin{equation}
-    Luminosidad \propto \frac{1}{k}\left(\frac{\gamma - 1}{\gamma}\right)
-\end{equation}
+Existen tres mecanismos para transferir energía:
+    \begin{itemize}
+        \item La \textbf{Conducción} térmica transfiere energía mediante colisiones entre partículas. Sin embargo, para altas densidades de los interiores estelares, el camino libre medio de las partículas es casi siempre más corto que el de los fotones. De hecho, la conducción térmica funciona solo en caso de materia \textbf{\(e^-\)-degenerada}.
+        \item \textbf{Radiación:} El campo de radiación en el centro de una estrella, donde el gas está en estado de plasma, consiste en fotones de alta energía (X y \(\gamma\)) en equilibrio con la materia mediante interacciones \textbf{bound-free} entre electrones y fotones. En este caso, la materia es opaca a los fotones y el camino libre medio de estos últimos es \(\bar{\lambda} \sim (n_e \sigma)^{-1}\), donde \(n_e \approx \rho / m_H\) es la densidad numérica de electrones y \(\sigma \sim \sigma_T = 8\pi e^4 / 3 m_e^2 c^4 \approx 6 \cdot 10^{-25} \, \text{cm}^2\) es la sección eficaz (aquí, la de Thomson). Para el Sol, \(\bar{\rho}_\odot \approx 1.4 \, \text{g/cm}^3\) y, por lo tanto, \(\bar{\lambda} \sim 1 \, \text{cm}\).
+        Los fotones se propagan entonces a través del interior estelar mediante un proceso de \textbf{caminata aleatoria} que eventualmente disminuye su energía hasta frecuencias visibles y los desplaza gradualmente hacia afuera (el camino medio libre siendo más largo en una dirección que la otra debido al gradiente de densidad). La distancia recorrida por un fotón después de \(N\) pasos corresponde a la media cuadrática de la distribución, \(\bar{\lambda} \sqrt{N}\). El número de pasos y el tiempo necesarios para llegar a la superficie son entonces respectivamente \(N \sim (R_s / \bar{\lambda})^2\) y
 
-gráfico feo radiación superficies masa 
+        \begin{equation}
+        t_{diff} = \frac{R_s^2}{\bar{\lambda} c}
+        \end{equation}
 
+        (también llamado \textbf{tiempo de difusión}). En el Sol, \(t_{diff, \odot} \sim 3 \cdot 10^4\) años. En breve, \(t_n \gg t_{th}\) y \(t_{diff} \gg t_{dyn} \gg t_{col}\): esto hace las estrellas bastante estables y previsibles.
 
-\subsection{Soluciones}
+        \item \textbf{Presión de radiación:} La presión de radiación (i.e., de fotones) es \(P_{rad} = \frac{u}{3} = \frac{4\sigma}{3c}T_{eff}^4\) en el caso de un cuerpo negro, y la tasa de deposición de impulso en una cáscara esférica de espesor \(dr\) es \(-dP_{rad}/dr \cdot 4\pi r^2 dr\). Por otro lado, la tasa de absorción de impulso por la misma cáscara \([r, dr]\) es \(L(r)\kappa\rho dr/c\), visto que \(dI/I = -\kappa\rho dr\) y que el impulso de un fotón es \(p = E/c\). Si igualamos los dos, obtenemos
+
+        \begin{equation}
+            L(r) = -4\pi r^2 \frac{4ac}{3\kappa(\rho, T)\rho(r)} T^3(r) \frac{dT}{dr} \quad \text{con } a = 4\sigma/c.
+        \end{equation}
+
+        Invirtiendo esta ecuación, las presiones del gas, \(P_{gas} = k \rho T / \mu m_H\), y de la radiación, \(P_{rad} = 4\sigma T_{eff}^4 / 3c\), se igualan cuando \(T = \left(\frac{3k}{\mu m_H} \frac{c}{4\sigma}\rho\right)^{1/3}\), para una relación \(\log T\)-\(\log \rho\) de pendiente \(1/3\). Visto que \(\rho \propto M_s/R_s^3\) y \(R_s \propto M_s^{0.6}\), se ve que \(P_{gas}\) es dominante en estrellas de masa baja, mientras \(P_{rad}\) domina el interior de estrellas de gran masa. Esto también implica que estrellas más masivas son también más calientes y menos densas.
+
+        \item \textbf{Convección:} Consideremos una burbuja de gas subiendo desde \(r\) a \(r+dr\) y expandiéndose adiabáticamente (Fig. 4). En este caso, \(P_2 = P_1(\rho_2/\rho_1)^\gamma\), donde \(\gamma = c_P/c_V\) es el exponente adiabático. Asumiendo que la burbuja se mantiene en equilibrio, \(P_2 = P(r+dr) \approx P_1 + (dP/dr)dr\). Por lo tanto,
+
+        \begin{equation}
+            \rho_2 = \rho_1 \left( \frac{P_2}{P_1} \right)^{1/\gamma} \approx \rho_1 \left( 1 + \frac{1}{P} \frac{dP}{dr} \right)^{1/\gamma} \approx \rho_1 + \frac{\rho_1}{\gamma P} \frac{dP}{dr}
+        \end{equation}
+
+        El elemento se hunde cuando \(\rho_2 > \rho(r+dr)\), i.e. si \(\frac{\rho}{\gamma P} \frac{dP}{dr} > \frac{d\rho}{dr}\): esto es el criterio de Schwarzschild para la estabilidad convectiva. Visto la ecuación de estado, hay \(T_2 < T(r+dr)\). Por lo tanto, el criterio se puede también escribir en función de un gradiente de temperatura crítico: \(\left(\frac{dT}{dr}\right) < \left(\frac{dT}{dr}\right)_{\text{ad}}\); es decir, un gradiente de temperatura demasiado fuerte conduce a la aparición de la convección (Fig. 5).
+
+        En el caso adiabático \(P = C \rho^\gamma\), así que \(\frac{dP}{dr} = C \gamma \rho^{\gamma - 1} \frac{d\rho}{dr} = \gamma \frac{P}{\rho} \frac{d\rho}{dr}\). Asumiendo un gas ideal \(dP = \frac{P}{T} dT + \frac{P}{\rho} d\rho\), la combinación de estas dos expresiones da
+
+        \begin{equation}
+            \left( \frac{dT}{dr} \right) = (\gamma - 1) \frac{T}{P} \frac{P}{\rho} \frac{d\rho}{dr} = \left( \frac{\gamma - 1}{\gamma} \right) \frac{T}{P} \frac{dP}{dr}.
+        \end{equation}
+
+        Asumiendo también el equilibrio hidrostático, el gradiente de temperatura adiabático es
+
+        \begin{equation}
+            \left( \frac{dT}{dr} \right)_{\text{adiabatic}} = -\left( \frac{\gamma - 1}{\gamma} \right) \frac{\mu m_H}{k} \frac{GM(r)}{r^2}.
+        \end{equation}
+
+        En la práctica, casos que producen convección son casi siempre se quedan cerca del gradiente crítico (el transporte de calor eficiente en un caso super-adiabático baja rápidamente el gradiente de temperatura hacia el valor crítico). En una estrella, un gradiente de temperatura fuerte es típicamente causado por una gran luminosidad interna. Por lo tanto, existe una luminosidad máxima para la cual la energía se puede transportar radiativamente:
+
+        \begin{equation}
+            L_{max} \propto \frac{1}{\kappa} \left( \frac{\gamma - 1}{\gamma} \right)
+        \end{equation}
+
+        Se puede entonces destacar dos casos (Fig. 6):
+        \begin{itemize}
+            \item Estrellas de masa baja (solar y por debajo) tienen opacidades superficiales grandes con \(\gamma < 5/3\). Por lo tanto, sus núcleos tienden a ser radiativos y sus ``superficies'' convectivas.
+            \item Estrellas de masa grande tienen muy alta luminosidad y núcleos calientes, entonces convectivos. Sin embargo, su opacidad superficial es menor y, por lo tanto, las capas externas son radiativas.
+        \end{itemize}
+    \end{itemize}
+
+\subsubsection{Soluciones analíticas}
+
+En resumen, las ecuaciones de estructura estelar son:
+
+\begin{align}
+    \text{perfil masa-densidad: } & \frac{dM}{dr} = 4\pi r^2 \rho(r) \\
+    \text{equilibrio hidrostático: } & \frac{dP}{dr} = -\frac{GM(r)\rho(r)}{r^2} \\
+    \text{perfil de luminosidad: } & \frac{dL}{dr} = 4\pi r^2 \rho(r) \epsilon(r) \\
+    \text{transporte radiativo: } & \left( \frac{dT}{dr} \right)_{\text{rad}} = -\frac{3}{4ac} \frac{\kappa(\rho, T)\rho(r)}{T^3} \frac{L}{4\pi r^2} \\
+    \text{transporte convectivo: } & \left( \frac{dT}{dr} \right)_{\text{conv}} \approx -\frac{\mu m_H}{k} \left( 1 - \frac{1}{\gamma(\rho, T)} \right) \frac{GM(r)}{r^2} \\
+    \text{ecuación de estado: } & P(\rho, T) = \frac{k}{\mu m_H} \rho T
+\end{align}
+
+Tenemos entonces 5 ecuaciones con 5 variables (M, P, L, T, \(\rho\)), en principio solucionables conociendo la opacidad \(\kappa\) y el término de producción de energía \(\epsilon\). En la práctica \(\kappa\) y \(\epsilon\) son funciones de \(\rho\) y \(T\), y las ecuaciones de estructura tienen que ser resueltas numéricamente. Sin embargo, hay soluciones analíticas parciales.
+
 \begin{itemize}
-    \item Politropes
-    \begin{equation}
-        P = C \rho^{\gamma}
-    \end{equation}
+    \item \textbf{Politropes:} Una clase de soluciones asume \(P = K\rho^\gamma\), con \(\gamma = 1+1/n\), donde \(n\) se llama el índice politrópico. Modelos politrópicos (o ``polytropes'') son soluciones de la ecuación de Lane-Emden (una forma de la ecuación de Poisson para cuerpo autogravitantes esféricamente simétricos) y, por lo tanto, también de las dos primeras ecuaciones de estructura.
     
+    Un índice de \(n = 1.5\), por ejemplo, describe bien tanto las estrellas completamente convectivas como cuerpos formados por materia degenerada no relativista (no en absoluto lo mismo). Por otra parte, \(n = 3\) funciona tanto para las regiones radiativas de las estrellas de secuencia principal como para materia relativista degenerada.
+
+    \item \textbf{``Ansatz'':} Polytropes no son la única clase de soluciones. Podemos también asumir, por ejemplo, un perfil de densidad exponencial: \(\rho(r) = \rho_c e^{-r/H}\), con \(H = \delta R_s\), \(\delta \sim 0.1\) y \(\rho_{c,\odot} \sim 230 \, \text{g/cm}^3\). Supongamos también que el término de producción de energía es
+        
     \begin{equation}
-        \gamma = 1 + \frac{1}{n}
+        \epsilon(r) = \begin{cases} 
+        \epsilon_c = \epsilon_0 X^2 \rho_c T_c^\alpha & r < 2 \delta R_s \\ 
+        0 & r > 2 \delta R_s 
+        \end{cases}
     \end{equation}
 
-    $n:$ Índice politrópico.
+    Esto constituye una buena aproximación de la estructura interna del Sol y de otras estrellas de secuencia principal (Fig. 7).
 
-    Para $n = 3/2$ estrellas convectivas materia degenerada no relativista.
-    
-    Para $n = 3$ sistema dominado por radiación materia degenerada relativista.
-    \item Ansatz $\rho (r) = \rho_c e ^{r/H}$ con $H = \delta R_s$, $\delta \sim 0.1$ y $\rho_c \sim 230g/cm^3$ 
-    \item 
-    
-    
-    
+    El perfil de masa es entonces
+
+    \begin{equation}
+        M(r) = 4\pi \rho_c \int_0^r x^2 e^{-x/H} dx = 4\pi \rho_c 2H^3 \left[ 1 - e^{-r/H} \left( 1 + \frac{r}{H} + \frac{r^2}{2H^2} \right) \right]
+    \end{equation}
+
+    Cuando \(r \to R_s\), \(e^{-r/H} \to e^{-1/\delta} \sim 0\) y entonces \(M_s = 4\pi \rho_c 2H^3\). Por lo tanto, la densidad central es \(\rho_{c,\odot} \sim 170\bar{\rho}\).
+
+    Integrando la ecuación de equilibrio hidrostático desde \(r=0\) a \(r=R_s\):
+
+    \begin{equation}
+        P(R_s) - P_c = -G \int_0^{R_s} \frac{M(r)}{r^2} \rho(r) \, dr \Rightarrow P_c = 8\pi G \rho_c^2 H^2 \int_0^{1/\delta} \frac{e^{-x}}{x^2} \left[ 1 - e^{-x} \left( 1 + x + \frac{x^2}{2} \right) \right] \, dx
+    \end{equation}
+
+    con \(x = r/H\). Cuando \(1/\delta \gg 1\), la integral \(\to 5.6 \cdot 10^{-2}\) y por lo tanto la presión y temperatura central son 
+
+    \begin{equation}
+        P_c = 2.2 \cdot 10^3 \frac{GM_s^2}{R_s^4} \frac{1}{\delta} \quad \text{y} \quad T_c = 5.6 \cdot 10^{-2} \frac{\mu_c m_H}{k_B} \frac{GM_s}{R_s} \frac{1}{\delta}
+    \end{equation}
+
+    usando la ecuación de estado. Por otro lado, la luminosidad del núcleo es
+
+    \begin{equation}
+        L = 4\pi X^2 \int_0^{2H} r^2 \rho^2 \epsilon_0 T_c^\alpha dr = 4\pi X^2 \epsilon_0 T_c^\alpha \rho_c^2 \int_0^{2H} e^{-2r/H} r^2 dr = \pi X^2 \epsilon_0 T_c^\alpha \rho_c^2 H^3 (1 - 13e^{-4})
+    \end{equation}
+
+    donde asumimos que la fusión de hidrógeno (con abundancia X) proporciona la energía y usando \(\int e^{ax}x^2 dx = e^{ax}(x^2/a - 2x/a^2 + 2/a^3)\). Por lo tanto,
+
+    \begin{equation}
+        L_s \approx 1.2 \cdot 10^{-2} \frac{\epsilon_0 X^2 T_c^\alpha M_s^2}{\delta^3 R_s^3}
+    \end{equation}
+
+    Podemos también llegar a \(T_c\) resolviendo la ecuación de transporte por radiación (i.e., para estrellas de masa solar o menos; Fig. 6), asumiendo \(T(r<2H) \approx T_c\) (i.e., que la temperatura del núcleo es constante) y que la opacidad depende linealmente de la densidad: \(\kappa \approx \kappa_0 \rho\). Integrando la ecuación de transporte entre \(2H\) y \(R_s\) (i.e., donde \(L\) es constante) nos da
+
+    \begin{equation}
+        T^4(R_s) - T^4_c = -\frac{3}{4\pi\sigma_B} \kappa_0 L \rho_c \int_{2H}^{R_s} \frac{e^{-r/H}}{r^2} dr.
+    \end{equation}
+
+    Con \(x = r/H\), la integral en el lado izquierdo se vuelve 
+
+    \begin{equation}
+        \int_{2H}^{R_s} \frac{e^{-r/H}}{r^2} dr = \frac{1}{H} \left( \int_2^{1/\delta} \frac{e^{-x}}{x^2} dx \right) \approx \int_2^{\infty} \frac{e^{-x}}{x^2} dx = 1.9 \cdot 10^{-2} \frac{1}{H}.
+    \end{equation}
+
+    Visto que \(T(r) \ll T_c\) para \(r > 2H\), 
+
+    \begin{equation}
+        T_c = \left( \frac{1.8 \cdot 10^{-4}}{\delta^4} \frac{\kappa_0}{\sigma_B} L_s M_s / R_s^4 \right)^{1/4}.
+    \end{equation}
+
+    Es decir, una mayor opacidad implica un gradiente de temperatura más fuerte. Además, combinando IV y VI nos da la relación masa-luminosidad:
+
+    \begin{equation}
+        L_s = 5.5 \cdot 10^{-2} \left( \frac{\mu_c m_H G}{k} \right)^4 \frac{\sigma}{\kappa_0} M_s^3 \quad (\text{VII})
+    \end{equation}
+
+    y la combinación de IV, V y VI da
+
+    \begin{equation}
+        R_s \propto \mu_c^{\frac{\alpha+3}{\alpha+3}} \left( X^2 \epsilon_0 \kappa_0 \right)^{\frac{1}{\alpha+3}} M_s^{\frac{\alpha-1}{\alpha+3}} \delta^{-1} \quad (\text{VIII}).
+    \end{equation}
+
+    En estrellas de tipo solar, \(\alpha=5\), por lo tanto \(R_s \propto M_s^{0.6}\) y \(T_c \propto \mu_c^{7/8} M_s^{0.5}\) usando IV y VIII: la temperatura central disminuye con la masa estelar (\(T_c \downarrow M_s \downarrow\)) y aumenta con la masa molecular media (\(T_c \uparrow \mu_c \uparrow\)). Visto que \(T_{eff}^4 \propto L_s/R_s^2 \propto \mu_c^4 M_s^3 / \kappa_0 R_s^2\), VIII implica 
+
+    \begin{equation}
+        T_{eff} \propto \mu_c^{\frac{10+\alpha}{12+4\alpha}} X^{-\frac{5+\alpha}{3+\alpha}} \kappa_0^{-\frac{11+\alpha}{12+4\alpha}} M_s^{\frac{12+4\alpha}{12+4\alpha}} : \quad T_{eff} \uparrow \text{ cuando } M_s \uparrow, \quad \mu_c \uparrow \text{ o } \kappa_0 \downarrow.
+    \end{equation}
+
+    Esto significa que la ubicación de la secuencia principal en el diagrama H.-R. depende también de la metalicidad Z.
 \end{itemize}
+
+\subsubsection{Núcleos convectivos}
+
+La convección empieza si \(\left( \frac{dT}{dr} \right) \ge \left( \frac{dT}{dr} \right)_{ad} = \left( \frac{\gamma - 1}{\gamma} \right) \frac{T}{P} \frac{dP}{dr}\), entonces cuando \(\frac{dT}{dP} > \left( 1 - \frac{1}{\gamma} \right) \frac{T}{P}\), o \(\frac{P}{T} \frac{dT}{dP} = \frac{k}{\mu m_H} \rho \frac{dT}{dP} > 1 - \frac{1}{\gamma}\) usando la ecuación de estado. Si dividimos la ecuación de transporte radiativo por la de equilibrio hidrostático, obtenemos 
+
+\begin{equation}
+    \frac{3}{16} \frac{k_B}{4\pi \sigma_B} \frac{\kappa}{\mu_H} \frac{1}{T^3} \frac{L(r)}{M(r)} > 1 - \frac{1}{\gamma}.
+\end{equation}
+
+Descuido el gradiente de densidad, \(dL(r) \approx \epsilon_0 \rho_c^2 T_c^\alpha 4\pi r^2 dr\) en el núcleo (usando V y \(\rho_c \sim 170\bar{\rho}\)) y por lo tanto \(L(r) \approx \epsilon_0 \rho_c^2 T_c^\alpha 4\pi r^3/3 \approx \epsilon_0 \rho_c^2 T_c^\alpha M(r)\).
+
+Finalmente, \(\frac{3 k_B}{64 \pi \mu_H \sigma_B} \frac{\kappa}{\epsilon_0 \rho_c T_c^{\alpha-3}} > 1 - \frac{1}{\gamma} = 0.4\) para gases mono-atómicos.
+
+Usando IV y la expresión para \(\rho_c\) da:
+\begin{itemize}
+    \item \(M_s \ge 1.4 M_\odot\): núcleo convectivo
+    \item \(M_s \le 1.4 M_\odot\): núcleo radiativo
+\end{itemize}
+
+\subsubsection*{Resumen: escalas de tiempo}
+
+\begin{align*}
+    \text{Escala de tiempo dinámico: } & t_{dyn} \sim \sqrt{\frac{2 R_s^3}{GM_s}} = \sqrt{\frac{3}{2\pi G \bar{\rho}}} \quad t_{dyn, \odot} \sim 40 \text{ min} \\
+    \text{Escala de tiempo térmica (KH): } & t_{th} \sim \frac{GM_s^2}{R_s L_s} \quad t_{th, \odot} \sim 1.5 \times 10^7 \text{ años} \\
+    \text{Escala de tiempo nuclear: } & t_N \sim \eta \frac{M_c c^2}{L_s} \quad t_{N, \odot} \sim 10^{10} \text{ años} \\
+    \text{Escala de tiempo de difusión: } & t_{diff} = \frac{R_s^2}{\bar{\lambda} c} \quad t_{diff, \odot} \sim 3 \times 10^4 \text{ años} \\
+    \text{Escala de tiempo de colisiones: } & t_{coll} = \frac{\lambda}{c} \quad t_{coll, \odot} \sim 10^{-10} \text{ s}
+\end{align*}
+
+\section{Unidad II: Gases y radiación}
+
+\subsubsection{Materia, radiación y degeneración}
+
+Las partículas en equilibrio termodinámico siguen funciones de distribución de tipo
+\begin{equation}
+    dN = \frac{dg}{e^{-\eta + E/kT} \pm 1}
+\end{equation}
+donde \(dN = dN(E,E+dE)\), \(dg(E,E+dE) = \alpha d^3x d^3p/h^3\) es el número de estados cuánticos, \(\eta = \mu/kT\) (con \(\mu\) el potencial químico) es el parámetro de degeneración, \(+1\) para fermiones (principio de Pauli) y \(-1\) para bosones. El valor de \(\eta\) varía según el tipo de sistema:
+\begin{itemize}
+    \item \(\eta \gg 1\) en sistemas fuertemente degenerados
+    \item \(-5 < \eta < 5\) en sistemas débilmente degenerados
+    \item \(\eta \ll -1\) en sistemas no degenerados
+\end{itemize}
+
+\paragraph{Partículas no degeneradas}
+Cuando \(\eta \ll -1\) el término exponencial es \(\gg 1\) y entonces \(dN \propto e^\eta e^{-E/kT}\). Visto que \(dg = \alpha d^3x d^3p/h^3\), \(dN = \alpha e^\eta e^{-E/kT} d^3x d^3p/h^3\). Con \(E = mv^2/2 = p^2/2m\), tenemos \(N = \alpha e^\eta V(2\pi mk_BT)^{3/2}/h^3\), y por lo tanto la distribución de Maxwell
+\begin{equation}
+    dN = \frac{N}{V} \frac{1}{(2\pi mkT)^{3/2}} e^{-\frac{p^2}{2mkT}} d^3 p dV
+\end{equation}
+
+Consideramos un sistema con \(n\) partículas idénticas llenando un volumen \(V\). La \textbf{distancia media \(r_0\) entre partículas} es entonces definida por \(n = N/V = 1/r_0^3\). El ``tamaño'' cuántico de cada partícula es dado por la \textbf{longitud de onda de de Broglie}, \(\lambda_{dB} = \frac{h}{\sqrt{2\pi mkT}}\). Para \(\eta \ll -1\), \(e^\eta \approx \frac{n}{\alpha} \frac{h^3}{(2\pi m k_B T)^{3/2}}\) y entonces podemos escribir \(\eta\) en términos de \(\lambda_{dB}\) y de \(r_0\):
+\begin{equation}
+    \eta_{ndeg} = \ln \left( \frac{1}{\alpha} \frac{\lambda_{dB}^3}{r_0^3} \right).
+\end{equation}
+Por lo tanto \(\eta \ll -1\) implica \(r_0 \gg \lambda_{dB}\): un sistema \textbf{clásico, no cuántico}.
+
+\paragraph{Sistemas degenerados en astrofísica}
+Los objetos astrofísicos compuestos de materia degenerada tienden a ser principalmente \textbf{fermiónicos}. Por lo tanto, siguen el \textbf{principio de Pauli}, con una fase máxima de \(\alpha/h^3\) por estado cuántico.
+
+La función de distribución es entonces 
+\begin{equation}
+    f(\epsilon = p^2/2m) = \left( e^{-\eta + \frac{\epsilon}{kT}} + 1 \right)^{-1} = \left( e^{\frac{\epsilon - \mu}{kT}} + 1 \right)^{-1}
+\end{equation}
+con \(\eta = \mu/kT\). El sistema es \textbf{degenerado} si \(\eta \gg 1\), por lo tanto cuando \(kT \ll \mu\).
+
+Asumiendo que la distribución de momentos es isotrópica y la de partículas homogénea, integrando la función de distribución da
+\begin{equation}
+    n = \frac{N}{V} = \frac{\alpha}{h^3} \int \left( e^{-\eta + p^2/2mkT} + 1 \right)^{-1} 4 \pi p^2 dp = \frac{\alpha}{h^3} \frac{2}{\pi^{1/2}} (2\pi mkT)^{3/2} \int \frac{x^{1/2} dx}{e^{-\eta + x} + 1}, \quad \text{con } x = p^2/2mk_BT.
+\end{equation}
+
+Cuando \(\eta \gg 1\), \((e^{-\eta + x} + 1)^{-1}\) se vuelve en función escalonada. Por lo tanto, \(f(\epsilon < \mu) = 1\) (i.e., todos los estados con \(\epsilon < \mu\) están ocupados) y \(f(\epsilon > \mu) = 0\) (el caso \(\epsilon_F = \mu\) se llama la \textbf{energía de Fermi}), la integral se simplifica a \(\int_0^\eta x^{1/2} dx = 2 \eta^{3/2}/3\) y obtenemos
+\begin{equation}
+    \eta_{deg} = \frac{1.21}{\alpha^{2/3}} \left( \frac{\lambda_{dB}}{r_0} \right)^2 :
+\end{equation}
+por lo tanto, \(r_0 \ll \lambda_{dB}\) si \(\eta \gg 1\) y la naturaleza cuántica de las partículas no se puede despreciar.
+
+En breve,
+\begin{equation}
+    \frac{\lambda_{dB}}{r_0} \begin{cases} \gg 1 & \text{gas de Fermi} \\ \ll 1 & \text{gas de Maxwell/Boltzmann} \end{cases}
+\end{equation}
+
+Aproximando el número de partículas en una estrella a \(n = 3M_s/4\pi R_s^3 m_p\), donde \(m_p\) es la masa de protones, podemos estimar el grado de degeneración en interiores estelares. Asumiendo \(T_c \approx 2 \cdot 10^7\) K y \(1 M_\odot\), tenemos (Tabla 1):
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Tabla 1} & \textbf{\(R_s\)} & \textbf{\(n\) (cm\(^{-3}\))} & \textbf{\(\lambda_{dB}/r_0\) (e\(^-\))} & \textbf{\(\lambda_{dB}/r_0\) (p\(^+\), n\(^0\))} \\ \hline
+Sol & \(7 \cdot 10^{10}\) cm & \(8 \cdot 10^{23}\) & 0.15 & 0.0037 \\ \hline
+EB & \(0.01 R_\odot\) & \(8 \cdot 10^{29}\) & 15 & 0.37 \\ \hline
+EN & \(1.4 \cdot 10^{-5} R_\odot\) & \(3 \cdot 10^{38}\) & - & 27 \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{itemize}
+    \item Sol: gas ideal
+    \item enana blanca (EB): \(e^-\)-degenerada, \(p^+\) no degenerados
+    \item estrella de neutrones (EN): \(n^0\)-degenerada
+\end{itemize}
+
+\subsubsection{Radiación}
+
+Por otro lado, los fotones son bosones cuyo número no se conserva. Por lo tanto, \(\eta = 0\) y \(dN_\gamma = dg(e^{-E/kT}-1)^{-1}\). Fotones tienen dos polarizaciones y, en equilibrio termodinámico, la distribución de los momentos es isotrópica. Por tanto,
+\begin{equation}
+    dg = \frac{2dV}{h^3} 4\pi p^2 dp \quad \text{y, considerando que } p = h\nu/c, \quad dn = \frac{8\pi \nu^2}{c^3} \frac{d\nu}{e^{h\nu/kT} - 1}.
+\end{equation}
+La densidad de energía \(U\) en el intervalo \((\nu, \nu+d\nu)\) es entonces \(dn \cdot h\nu\). Si definimos la intensidad \(B\) como la energía fluyendo por unidad de superficie, segundo y ángulo sólido, tenemos \(U_\nu = \frac{1}{c} \int 4\pi B_\nu d\omega = \frac{4\pi}{c} B_\nu\), con
+\begin{equation}
+    B_\nu = \frac{2h\nu^3}{c^2} \frac{1}{e^{h\nu/kT} - 1} \quad \text{(i.e., la distribución de Planck)}
+\end{equation}
+Si \(h\nu/kT \ll 1\), \(e^{h\nu/kT} \approx 1 + h\nu/kT\) y (límite Rayleigh-Jeans). Por otro lado, si \(h\nu/kT \gg 1\), \(e^{h\nu/kT} \gg 1\) y entonces (límite Wien). Integrando sobre las frecuencias, se obtiene la ley de Stefan-Boltzmann: 
+\begin{equation}
+    B(T) = \int_0^\infty B_\nu(T) d\nu = \sigma_B T^4, \quad \text{con } \sigma_B = \frac{2\pi^5 k^4}{15 h^3 c^2}
+\end{equation}
+
+\subsubsection{Líneas espectrales}
+
+Como se mencionó antes, el espectro de las estrellas sigue en primera aproximación un cuerpo negro correspondiente a la temperatura de la ``superficie'' de la estrella (o sea, la fotosfera de donde se emite la luz). Sin embargo, se notan desviaciones, en particular líneas de absorción que se pueden relacionar con elementos químicos: se destacan líneas de hidrógeno, especialmente en el espectro de estrellas de tipo A y B, y de metales en el espectro de estrellas frías de masa baja (Fig. 1). Estas líneas son producidas en las fotosferas estelares.
+
+\paragraph{Transiciones atómicas electrónicas}
+Fotones pueden ser absorbidos o emitidos mediante procesos cuyo espectro de energía puede ser
+\begin{itemize}
+    \item discreto: i.e., correspondiente a niveles propios de electrones ligados
+    \item continuo: típicamente mediado por electrones libres
+\end{itemize}
+Electrones pierden o ganan energía (i.e., subiendo/bajando de nivel) emitiendo (espontáneamente o no) o absorbiendo un fotón. Las transiciones posibles son (Fig. 2):
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Electrón} & \textbf{Espectro} & \textbf{Resultado} \\ \hline
+ligado \(\to\) ligado & discreto & línea espectral \\ \hline
+ligado \(\to\) libre & continuo & ionización \\ \hline
+libre \(\to\) ligado & continuo-discreto & recombinación \\ \hline
+libre \(\to\) libre & continuo & Bremsstrahlung, etc. \\ \hline
+\end{tabular}
+\end{table}
+
+La opacidad \(\kappa\) de un gas por lo tanto no es una función monótona de \(\nu\), sino tiene máximos en las longitudes de onda correspondientes a las energías de transición.
+
+La probabilidad de la transición de línea \(i \to j\) por absorción/emisión de fotón con frecuencia \((\nu, \nu+d\nu)\), dentro del ángulo sólido \((\omega, \omega+d\omega)\) es
+\begin{align}
+    A_{ij} \phi(\nu) d\nu d\omega/4\pi & \quad \text{(emisión espontánea)} \\
+    B_{ij} I_\nu \phi(\nu) d\nu d\omega/4\pi & \quad \text{(absorción o emisión inducida)}
+\end{align}
+donde \(A_{ij}\) y \(B_{ij}\) se llaman coeficientes de Einstein y están relacionados por
+\begin{equation}
+    A_{ij} = \frac{2h\nu^3}{c^2} \frac{g_j}{g_i} B_{ji} \quad \text{y} \quad g_i B_{ij} = g_j B_{ji}
+\end{equation}
+\begin{equation}
+    E_{ij} = |E_i - E_j| = h\nu
+\end{equation}
+
+\subsubsection{Leyes de la espectroscopia de Kirchhoff}
+
+Agregando un término de emisión \(j_\nu = \epsilon_\nu ds\), la ecuación de transferencia radiativa vista previamente se vuelve \(\frac{dI_\nu}{d\tau_\nu} = -I_\nu + S_\nu\), donde \(S_\nu = \epsilon_\nu/\kappa_\nu\) se llama la función fuente.
+
+En caso de equilibrio radiativo, hay \(I_\nu = B_\nu(T)\) (radiación de cuerpo negro) y \(dI_\nu/ds = 0\) (campo de radiación homogéneo y isotrópico). Por lo tanto, la ecuación se reduce en \(S_\nu = B_\nu = \frac{2h\nu^2}{c^2} (e^{h\nu/kT}-1)^{-1}\).
+
+Consideremos un volumen lleno de gas entre el observador y una fuente de luz con intensidad \(I_0\). El observador verá (integrando la ecuación):
+\begin{equation}
+    I_\nu = I_\nu^0 e^{-\tau_\nu} + S_\nu(T)(1 - e^{-\tau_\nu})
+\end{equation}
+donde \(S_\nu(T)\) y \(\tau_\nu\) son la función fuente y la profundidad óptica del gas intermedio. Se pueden entonces destacar tres casos (Fig. 3):
+
+\begin{itemize}
+    \item \(\tau_\nu \gg 1\): gas ópticamente grueso con o sin iluminación de fondo. En este caso \(I_\nu = S_\nu\) o \(I_\nu = B_\nu\), y el observador ve un espectro continuo. Esto se aplica(ría) a los cuerpos opacos y calientes.
+    \item \(I_0 \sim 0\), \(\tau_\nu \ll 1\): gas ópticamente delgado en equilibrio sin iluminación. Expandiendo el segundo término en Taylor, se obtiene \(I_\nu = \tau_\nu B_\nu\): la emisión es proporcional a \(\tau_\nu\), i.e., a \(\kappa_\nu\). Visto que \(\kappa_\nu\) es grande en las frecuencias correspondientes a transiciones de línea, se ve un espectro de emisión.
+    \item \(I_0 \neq 0\), \(\tau_\nu \ll 1\): gas ópticamente delgado con iluminación de fondo. Visto que \(\tau_\nu \ll 1\) se puede usar la expansión de Taylor de \(e^{-\tau_\nu}\) para aproximar \(1 - e^{-\tau_\nu} \approx 1 - 1 + \tau_\nu = \tau_\nu\), que da \(I_\nu = I_\nu^0(1 - \tau_\nu) + \tau_\nu S_\nu = I_\nu^0 - \kappa_\nu S_\nu (I_\nu^0 - S_\nu)\). Por lo tanto:
+    \begin{itemize}
+        \item si \(B_\nu(T) = S_\nu < I_\nu^0\), se ven líneas de absorción en las frecuencias donde \(\kappa_\nu\) es grande. Este caso corresponde a las fotosferas estelares (más precisamente a sus capas superiores), estas últimas siendo caracterizadas por \(\tau \approx 2/3\).
+        \item si \(B_\nu(T) = S_\nu > I_\nu^0\), se ven líneas de emisión superpuestas a un fondo continuo, siempre a las frecuencias donde \(\kappa_\nu \gg 1\) (i.e., correspondientes a transiciones de línea).
+    \end{itemize}
+\end{itemize}
+
+Para simplificar, se ve entonces absorción cuando la temperatura de la fuente \(T_0\) es más alta que la temperatura del gas \(T_{gas}\) mientras en el caso opuesto habrá emisión de línea. Existen sistemas estelares (raros) que tienen líneas de emisión. Sin embargo, en estos casos la emisión no surge del interior estelar o de su superficie, sino de gas circundante.
+
+\subsubsection{Fórmulas de Boltzmann y Saha}
+
+Por otro lado, para explicar la variación de líneas de absorción en función del tipo estelar, tenemos que considerar un gas atómico no degenerado con un electrón excitado por átomo.
+
+La energía de un átomo A del gas es entonces \(E = p_A^2/2m_A + E_i\), donde \(E_i\) es la energía de excitación, y el número de estados cuánticos en el intervalo \((E, E+dE)\) es \(dg_A = g_i d^3x d^3p_A/h^3\), donde \(g_i\) es el grado de degeneración del nivel excitado. Asumiendo que el sistema está en equilibrio termodinámico, la densidad de átomos en un estado cuántico \(i\) es
+\begin{equation}
+    n_i = \frac{1}{V} \int dN_i = \frac{1}{V} \frac{g_i}{h^3} e^{\eta_A} e^{-E_i/kT} \int \int e^{-p_A^2/2m_A kT} d^3 p_A d^3 x = \frac{(2\pi m_A kT)^{3/2}}{h^3} g_i e^{\eta_A} e^{-\frac{E_i}{kT}}
+\end{equation}
+
+Por otra parte, en el caso de ionización simple, las energías del átomo, ion y electrón son \(E_A = P_A^2/2m_A\), \(E_I = P_I^2/2m_I + E_{ion}\), \(E_e = P_e^2/2m_e\), donde \(E_{ion}\) es la energía de ionización. Por lo tanto, las funciones de distribución son
+\begin{equation}
+    n_A = g_A \frac{(2\pi m_A kT)^{3/2}}{h^3} e^{\eta_A}, \quad n_I = g_I \frac{(2\pi m_I kT)^{3/2}}{h^3} e^{-\frac{E_{ion}}{kT}}, \quad n_e = 2 \frac{(2\pi m_e kT)^{3/2}}{h^3} e^{\eta_e}
+\end{equation}
+(visto que el electrón tiene dos estados de spin). Entonces tenemos
+\begin{equation}
+    \frac{n_I n_e}{n_A} = \frac{2 g_I (2\pi m_I kT)^{3/2} (2\pi m_e kT)^{3/2}}{(2\pi m_A kT)^{3/2}} \frac{h^3}{h^3} e^{\eta_I + \eta_e} \frac{e^{-\frac{E_{ion}}{kT}}}{e^{\eta_A}}
+\end{equation}
+Sin embargo, \(m_I \approx m_A\) y \(\eta_I + \eta_e - \eta_A = 0\) (conservación de la energía) y esta expresión se simplifica a la \textbf{fórmula de Saha}:
+\begin{equation}
+    \frac{n_{i+1}}{n_i} = \frac{2 g_{i+1}}{n_e g_i} \frac{(2\pi m_e kT)^{3/2}}{h^3} e^{-\frac{E_{i+1}-E_i}{kT}}
+\end{equation}
+válida para cualquier transición entre dos niveles subsiguientes de ionización \(i \to i+1\).
+
+La dependencia en temperatura de las fórmulas de Boltzmann y Saha explica la variación de líneas de absorción en el espectro de estrellas de tipo diferente pero con la misma composición química (metalicidad).
+
+Por ejemplo, consideremos la \textbf{serie de Balmer} del hidrógeno: se trata de líneas espectrales en longitudes de onda visibles producidas por transiciones entre los niveles \(n > 2\) y \(n = 2\) del átomo de hidrógeno (Fig. 4). En este último las energías de nivel son dadas por \(E_n = -Z^2 e^2/2a_0 n^2\), donde \(Z = 1\) y \(a_0 = 0.529\) \AA{} es el radio de Bohr, mientras la degeneración por nivel es \(g_n = 2 \sum_{l=0}^{n-1} (2l+1) = 2n^2\).
+
+La fracción de átomos de hidrógeno en el nivel \(n = 2\) se encuentra entonces combinando las fórmulas de Boltzmann y Saha:
+\begin{equation}
+    \frac{n_2}{n_{tot}} = \frac{n_2}{n_I} \frac{n_I}{n_{tot}} \approx \frac{n_2}{n_I} \frac{n_I}{n_I + n_{II}}
+\end{equation}
+Visto además que \(n_I \approx n_1 + n_2\), tenemos
+\begin{equation}
+    \frac{n_2}{n_{tot}} = \frac{n_2/n_1}{1 + n_2/n_1} \frac{1}{1 + n_{II}/n_I}.
+\end{equation}
+
+Para la ecuación de Saha, \(n_e = \frac{n_{II}}{n_I + n_{II}} n = x \cdot n\), donde \(n\) es la densidad de H. Además, el hidrógeno ionizado siendo solo un protón, \(g_i \approx g_1 = 2\) y \(g_{i+1} = 1\). Asumiendo \(\rho/m_H \sim 10^{14}\) cm\(^{-3}\) (típico de una atmósfera estelar), se encuentra que \(n_2/n_{tot}\) tiene un \textbf{pico a \(\sim 10^4\) K} (Fig. 5), de acuerdo con observaciones.
+
+A \(\lambda \le 3650\) \AA{} el nivel \(n = 2\) se ioniza. La absorción aumenta y se ve una ruptura en el continuo: la \textbf{ruptura de Balmer}.
+
+La presencia y la fuerza de la absorción fotosférica no depende solo de la temperatura sino también de la energía de ionización. Por ejemplo, en el espectro de estrellas frías se ven líneas de \textbf{CaII} prominentes, aunque este sea mucho más raro que el hidrógeno (\(n_{Ca}/n_H \approx 2 \cdot 10^{-6}\) a metalicidad solar). Sin embargo, la ionización del Ca requiere solo 6.11 eV, y las líneas H y K del CaII 3.12 eV, mientras para ionizar el hidrógeno se necesita 13.6 eV, y 10.2 eV para el nivel \(n = 2\). Por lo tanto, hay mucho más iones CaII que átomos de H en el estado \(n = 2\), por lo menos en el caso del Sol.
+
+Finalmente, ocurren también transiciones moleculares, más complicadas porque las moléculas pueden absorber y emitir radiación no solo a través de electrones sino también mediante modos vibratorios y rotacionales. En general, \(E_e > E_{vib} > E_{rot}\). Las líneas moleculares se encuentran en los espectros de estrellas frías y constituyen el mecanismo principal de enfriamiento del medio interestelar.
+
+\subsubsection{Forma de las líneas espectrales}
+
+Aunque los niveles de energía son discretos, las líneas tienen un ancho no nulo. Esto se debe a efectos cuánticos y a la distribución de velocidad de las partículas (i.e., átomos o moléculas) que las producen.
+
+\paragraph{Ancho de línea natural:}
+Los niveles de energía tienen un tiempo finito determinado por \(\tau_{linea} = 1/A_{ij}\). El principio de incertidumbre entonces implica que \(\Delta E \cdot \tau_{linea} \ge \hbar\). Esta incertidumbre sobre la energía determina el \textbf{ancho natural} de la línea, que sigue entonces un \textbf{perfil Lorentziano}
+\begin{equation}
+    \phi(\nu) = \frac{2}{\pi} \frac{A_{ij}/2}{(\nu - \nu_0)^2 + (A_{ij}/2)^2},
+\end{equation}
+donde \(\nu_0\) es la frecuencia central. Sin embargo, el ancho natural es muy pequeño: e.g., \(\Delta\nu/\nu_0 \sim 10^{-7}\) para la transición \(2 \to 1\) de H.
+
+\paragraph{Ensanchamiento colisional:}
+Los niveles de energía pueden ser perturbados por interacciones entre partículas, en cuyo caso el coeficiente de Einstein en la expresión del perfil Lorentziano se reemplaza por \(\gamma = 1/\tau_{linea} + 1/\tau_{presión}\), donde \(\tau_{presión} \approx 1/n\) (\(n\) siendo la densidad de partículas). Por lo tanto, medios de \textbf{menor densidad} (e.g., las atmósferas de estrellas gigantes rojas) producen \textbf{líneas más estrechas}.
+
+\paragraph{Ensanchamiento Doppler:}
+El movimiento de los átomos en el gas es aleatorio, con una velocidad típica dependiente de la temperatura: \(m_p v^2/2 = k_B T\). Este \textbf{movimiento termal} causa un efecto Doppler que produce una distribución Gaussiana de frecuencias:
+\begin{equation}
+    \phi(\nu) = \frac{1}{\sqrt{\pi}} \frac{1}{\Delta \nu_{th}} e^{-\left( \frac{\nu - \nu_0}{\Delta \nu_{th}} \right)^2}, \quad \text{con } \Delta \nu_{th}/\nu = \sqrt{2kT/m_p c^2}.
+\end{equation}
+La combinación del perfil Lorentziano y de la función de ensanchamiento térmico se llama \textbf{perfil de Voigt} (Fig. 6):
+\begin{equation}
+    \phi(\nu) = \frac{1}{\sqrt{\pi} \Delta \nu_{th}} \frac{\alpha}{\pi} \int_{-\infty}^{\infty} \frac{e^{-y^2}}{\alpha^2 + (x - y)^2} dy
+\end{equation}
+con \(\alpha = \frac{\gamma}{4\pi \Delta \nu_{th}}\) y \(x = \frac{\nu - \nu_0}{\Delta \nu_{th}}\) (\(\Delta \nu_D\) siendo el ancho Doppler).
+
+Aproximando el perfil intrínseco (Lorentziano) por una función delta da el perfil Doppler. De hecho, en muchos casos (especialmente en espectros de resolución limitada o S/N bajo), el perfil de línea está bien aproximado por una Gaussiana.
+
+Por otra parte, si la profundidad óptica \(\tau_0\) en el centro de la línea es grande, la línea puede \textbf{saturarse}: en este caso, solo las ``alas'' de la línea crecerán a medida que \(\tau_0\) aumenta y la parte Lorentziana dominará (Fig. 7).
+
+\subsubsection{Procesos libre-libre}
+
+\paragraph{Dispersión de Thomson \& Compton}
+Las dispersiones de Thomson y Compton son procesos donde un fotón de energía \(h\nu\) interactúa con una partícula cargada (típicamente un electrón). En el límite de energía baja, \(h\nu \ll m_e c^2\), la interacción es elástica (i.e., la energía del fotón no cambia) y la llamamos dispersión de Thomson. En este caso, la sección eficaz diferencial (probabilidad de interacción) es \(\frac{d\sigma}{d\Omega} = \frac{1}{2} r_e^2 (1 + \cos^2 \theta)\), donde \(\Omega\) es el ángulo sólido y \(\theta\) el de dispersión (Fig. 8). La sección eficaz total de Thomson es entonces
+\begin{equation}
+    \sigma_T = \frac{8\pi}{3} r_e^2 = \frac{8\pi e^4}{3 m_e^2 c^4} \approx 6.65 \cdot 10^{-25} \, \text{cm}^2
+\end{equation}
+La dispersión de Thomson se encuentra en atmósferas estelares y el medio interestelar.
+
+Por otro lado, cuando \(h\nu \sim m_e c^2\), los fotones pierden energía con \(\Delta \lambda = \lambda_c (1 - \cos \theta)\), \(\lambda_c = h/m_e c \approx 0.0246\) \AA{} llamándose la longitud de onda de Compton del electrón. La sección eficaz se encuentra mediante la fórmula de Klein-Nishina y es entonces \(\sigma(\nu) = \sigma_T \frac{3}{8x} (\ln(2x) + \frac{1}{2})\), con \(x = \frac{h\nu}{m_e c^2}\) y \(0 < \sigma_C < \sigma_T\). La dispersión de Compton es un mecanismo importante en plasmas astrofísicos en campos de radiación de alta energía (e.g., rayos X).
+
+Por otra parte, en el efecto Compton inverso fotones de baja energía son impulsados por electrones de alta energía. Ocurre en chorros producidos por núcleos activos de galaxias y constituye la base del efecto Sunyaev-Zel'dovich, donde el fondo cosmológico de microondas interactúa con el gas caliente presente en cúmulos de galaxias.
+
+\paragraph{Bremsstrahlung (termal)}
+Es emitida por electrones cuando son desviados por otras partículas cargadas (e.g., un ion; Fig. 9). Los electrones desacelerados irradian de acuerdo con la fórmula de Larmor: \(P = 2e^2|a^2|/3c^2\), donde \(a\) es la aceleración del electrón. La pérdida total de energía por unidad de volumen por Bremsstrahlung se deriva integrando la fórmula de Larmor en velocidad, asumiendo una distribución de Maxwell (i.e., termal): \(\epsilon_{ff} \propto T^{1/2} n_e n_i Z^2\), donde \(Z\) es el número atómico de las partículas deflectoras (iones). Es entonces proporcional al cuadrado de la densidad y a la raíz cuadrada de la temperatura.
+
+El espectro de la Bremsstrahlung es \(\epsilon_\nu^{ff} \propto T^{-1/2} n_e n_i Z^2 e^{-h\nu/kT}\): es decir, mayormente plano hasta un corte exponencial en \(h\nu = kT\).
+
+La pérdida de energía aumentando con la temperatura, la Bremsstrahlung establece un tiempo de vida finito para plasmas espaciales (ópticamente delgados) no mantenidos por una fuente de energía. De hecho, es el mecanismo principal de enfriamiento de plasmas astrofísicos y, entonces, de emisión de rayos X por cúmulos de galaxias.
+
+\paragraph{Emisión sincrotrón (no termal)}
+En modo similar a la Bremsstrahlung, electrones relativistas (\(m_e c^2 \gamma \gg m_e c^2 = 0.51\) MeV, \(\gamma = (1 - v^2/c^2)^{-1/2}\)) girando en un campo magnético emiten tangencialmente a su camino, en un cono delgado de ángulo
+\begin{equation}
+    \theta = \frac{m_e c^2}{E} = \frac{1}{\gamma} = \sqrt{1 - \frac{v^2}{c^2}}
+\end{equation}
+(Fig. 11). Para una sola partícula, la frecuencia pico del espectro sincrotrón es
+\begin{equation}
+    \nu_0 \sim \gamma^2 \frac{qB}{2\pi m c}
+\end{equation}
+La radiación sincrotrón tiene un espectro continuo y está polarizada perpendicularmente a la línea de campo B. Esta propiedad se puede entonces usar para deducir la orientación del campo magnético de un objeto astrofísico.
+
+Asumiendo que los electrones produciendo la emisión siguen una \textbf{distribución de energía en ley de potencia} del tipo \(N(E)dE \propto E^{-p}dE\), el espectro sincrotrón también será una ley de potencia con índice espectral \(s = -(p - 1)/2\), que se puede utilizar para deducir la distribución de energía inicial de las partículas.
+
+En una galaxia, las estrellas de neutrones y los remanentes de supernova constituyen las fuentes principales de radiación sincrotrón.
+
 
 \end{document}
