@@ -1,0 +1,30 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Introducción}{2}{section.1}%
+\contentsline {subsubsection}{\numberline {1.0.1}El diagrama de Hertzsprung-Russell}{9}{subsubsection.1.0.1}%
+\contentsline {subsubsection}{\numberline {1.0.2}Relaciones masa-Luminosidad y masa-radio}{10}{subsubsection.1.0.2}%
+\contentsline {subsubsection}{\numberline {1.0.3}Clasificación espectral de las estrellas}{12}{subsubsection.1.0.3}%
+\contentsline {section}{\numberline {2}Unidad I: Ecuaciones de estructura}{13}{section.2}%
+\contentsline {subsubsection}{\numberline {2.0.1}Suposiciones}{13}{subsubsection.2.0.1}%
+\contentsline {subsubsection}{\numberline {2.0.2}Teorema del virial y ecuación de estado}{15}{subsubsection.2.0.2}%
+\contentsline {subsubsection}{\numberline {2.0.3}Energía interna y escalas de tiempo}{16}{subsubsection.2.0.3}%
+\contentsline {subsubsection}{\numberline {2.0.4}Absorción}{17}{subsubsection.2.0.4}%
+\contentsline {subsubsection}{\numberline {2.0.5}Energía interna y escalas de tiempo}{18}{subsubsection.2.0.5}%
+\contentsline {subsubsection}{\numberline {2.0.6}Soluciones analíticas}{20}{subsubsection.2.0.6}%
+\contentsline {subsubsection}{\numberline {2.0.7}Núcleos convectivos}{23}{subsubsection.2.0.7}%
+\contentsline {section}{\numberline {3}Unidad II: Gases y radiación}{23}{section.3}%
+\contentsline {subsubsection}{\numberline {3.0.1}Materia, radiación y degeneración}{23}{subsubsection.3.0.1}%
+\contentsline {paragraph}{Partículas no degeneradas}{24}{section*.16}%
+\contentsline {paragraph}{Sistemas degenerados en astrofísica}{24}{section*.17}%
+\contentsline {subsubsection}{\numberline {3.0.2}Radiación}{25}{subsubsection.3.0.2}%
+\contentsline {subsubsection}{\numberline {3.0.3}Líneas espectrales}{26}{subsubsection.3.0.3}%
+\contentsline {paragraph}{Transiciones atómicas electrónicas}{26}{section*.19}%
+\contentsline {subsubsection}{\numberline {3.0.4}Leyes de la espectroscopia de Kirchhoff}{27}{subsubsection.3.0.4}%
+\contentsline {subsubsection}{\numberline {3.0.5}Fórmulas de Boltzmann y Saha}{27}{subsubsection.3.0.5}%
+\contentsline {subsubsection}{\numberline {3.0.6}Forma de las líneas espectrales}{29}{subsubsection.3.0.6}%
+\contentsline {paragraph}{Ancho de línea natural:}{29}{section*.21}%
+\contentsline {paragraph}{Ensanchamiento colisional:}{29}{section*.22}%
+\contentsline {paragraph}{Ensanchamiento Doppler:}{30}{section*.23}%
+\contentsline {subsubsection}{\numberline {3.0.7}Procesos libre-libre}{30}{subsubsection.3.0.7}%
+\contentsline {paragraph}{Dispersión de Thomson \& Compton}{30}{section*.24}%
+\contentsline {paragraph}{Bremsstrahlung (termal)}{31}{section*.25}%
+\contentsline {paragraph}{Emisión sincrotrón (no termal)}{31}{section*.26}%

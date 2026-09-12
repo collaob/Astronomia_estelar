@@ -25,7 +25,22 @@
 \usepackage{xcolor}
 \usepackage{csquotes} % Para citas textuales
 
+% hyperref debe cargarse casi al final del preámbulo
+\usepackage[
+    hidelinks,          % sin colores ni bordes en los links (ideal para imprimir)
+    bookmarksnumbered=true,
+    pdftitle={Astronomía Estelar},
+    pdfauthor={Benjamín Collao}
+]{hyperref}
+
 \DeclareMathOperator{\arcsec}{arcsec}
+
+% Para que el título del índice diga "Índice" en vez de "Índice general"
+\renewcommand{\contentsname}{Índice}
+
+% Profundidad del índice: incluye hasta subsubsection (p.ej. 3.0.1)
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
 
 % --------------------------------------------------
 % CONFIGURACIÓN DE PÁGINA
@@ -69,16 +84,8 @@
 
 \maketitle
 
-\section{Índice}
-\begin{itemize}
-    \item Introducción: ¿Qué es una estrella?
-    \item Unidad 1: Ecuaciones de estructura
-    \item Unidad 2: Procesos radiativos
-    \item Unidad 3: Procesos nucleares
-    \item Unidad 4: Equilibrio e inestabilidad
-    \item Unidad 5: Evolución estelar 
-    \item Unidad 6: Evolución estelar II, remanentes estelares
-\end{itemize}
+\tableofcontents
+\newpage
 
 \section{Introducción}
 
